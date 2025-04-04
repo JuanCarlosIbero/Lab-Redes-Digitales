@@ -87,30 +87,30 @@
                     <p id="resumen">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Resumen -</h2>
                         <p class="fs-6 mb-4">El presente proyecto busca demostrar de manera práctica las aplicaciones de las tecnologias de IOT para el monitoreo remoto del consumo generado por los salones dentro de la Universidad Iberoamericana Puebla, haciendo uso de <b>ESP32</b>, <b>Arduino UNO</b> y un sensor <b>SCT013</b>. </p>
-                        <p class="fs-6 mb-4">Se utilizaron componentes como el <b>LM358</b>, un OP AMP con el fin de filtrar y amplificar la señal medida del sensor de corriente, los datos se extrajeron por la placa Arduino Uno y fueron pasados al ESP32 por medio de comunicación I2C para que de ahí se subieran a Thingspeak, donde se pueden visualizar los sistemas y como va la corriente.</p>
+                        <p class="fs-6 mb-4">Se utilizaron componentes como el <b>LM358</b>, un OP AMP con el fin de filtrar y amplificar la señal medida del sensor de corriente, los datos se extrajeron por la placa Arduino Uno y fueron pasados al ESP32 por medio de comunicación I2C para que de ahí se subiran a Thingspeak, donde se pueden visualizar los sistemas y como va la corriente.</p>
                         
                         <p id="intro">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Introducción -</h2>
-                        <p class="fs-6 mb-4">El ESP32 es un microcontrolador de alto rendimiento desarrollado por <b>Espressif Systems</b>, ampliamente utilizado en aplicaciones de <b>Internet de las Cosas (IoT)</b>, automatización y sistemas embebidos. Este dispositivo cuenta con un procesador de doble núcleo, conectividad Wi-Fi y Bluetooth, además de una amplia gama de interfaces de entrada y salida, lo que lo convierte en una solución versátil para el desarrollo de proyectos electrónicos avanzados.</p>
-                        <p class="fs-6 mb-4">Gracias a su bajo consumo energético y su capacidad de procesamiento, el ESP32 se emplea en diversas aplicaciones, como la domótica, el monitoreo remoto, el control de dispositivos en tiempo real y la comunicación inalámbrica. Su compatibilidad con entornos de desarrollo como <b>Arduino IDE</b>, <b>MicroPython</b> y <b>ESP-IDF</b> facilita su programación y adaptación a distintos proyectos.</p>
+                        <p class="fs-6 mb-4">A lo largo de este proyecto se aborda el diseño e implementación de un sistema de medición y monitoreo de corrientes eléctricas empleando el sensor SCT013, el cual se encarga de convertir la corriente que circula por un conductor en una señal proporcional de fácil lectura. Aunque inicialmente se contempló la tarjeta ESP32 como la plataforma principal, surgieron complicaciones técnicas que motivaron el uso de Arduino Uno para la adquisición de datos. No obstante, el principio de medición se mantuvo y se estableció una comunicación I2C entre el Arduino Uno y la ESP32 para transferir los valores obtenidos.</p>
+                        <p class="fs-6 mb-4">Para lograr una señal estable y representativa, se incluyó un amplificador operacional LM358 que filtra y amplifica la salida del SCT013. De esta manera, el Arduino Uno puede leer con mayor precisión las variaciones de corriente. Posteriormente, los datos se envían a la ESP32 mediante I2C, y finalmente se publican en la plataforma Thingspeak, donde pueden visualizarse en tiempo real.</p>
                         
                         <p id="materiales">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Materiales -</h2>
                             <ul>
                                 <li>Node MCU ESP8266 o ESP32</li>
-                                <li>LED</li>
-                                <li>Resistencia de 220 Ohms</li>
-                                <li>4 Botones</li>
-                                <li>4 Resistencias de 1K Ohms</li>
+                                <li>Arduino UNO</li>
+                                <li>OP AMP LM358</li>
+                                <li>Sensor SCT013</li>
+                                <li>Caimanes</li>
                                 <li>Protoboard</li>
                                 <li>Cables DUPONT</li>
                             </ul>
                         
                         <p id="desarrollo">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Desarrollo -</h2>
-                        <p class="fs-6 mb-4">Para el desarrollo de la práctica se hizo uso el simulador <b>WOKWI</b> donde se realizó un armado virtual de los circuitos a diseñar para verificar su correcto funcionamiento antes de su posterior armado en físico.</p>
-                        <p class="fs-6 mb-4">Una vez terminadas las simulaciones se realizaron las pruebas pertinentes haciendo uso del ESP32, pushbutton y LED´s</p>
-                        <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="600px" src="img/WOKWI.png" alt="..." /></figure>
+                        <p class="fs-6 mb-4">Se desarrollaron primero distintas investigaciones con el fin de comprender completamente los sistemas a utilizar, despues de ello se paso a la etapa del diseño del sistema, donde se estuvo armando y diseñando al mismo tiempo, comprobando funcionamientos, al final se concluyo el sistema que terminamos de armar, incluyendo la Arduino Uno para extraer los datos y pasarlos al ESP32 para subrilos a Thingspeak.</p>
+                        <p class="fs-6 mb-4">Se uso una programación Maestro-Esclavo con las placas Arduino Uno y la ESP32, a manera que se utilzó como Maestro la placa Arduino Uno que es la que extrae y manda los datos al ESP32. El ESP32 fue el esclavo, recibiendo los datos mediante comunicación I2C con la Arduino y el ESP32 solo lee y sube los datos a Thinspeak, de forma que podamos monitorear las corrientes de distinas aulas del IDIT.</p>
+                        <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="600px" src="img/Armado.jpg" alt="..." /></figure>
                             
                             <p id="simulacion">
                             <h2 class="fw-bolder mb-4 mt-5 fs-5">- Simulación -</h1>
