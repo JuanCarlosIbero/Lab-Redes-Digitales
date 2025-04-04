@@ -112,74 +112,30 @@
                         <p class="fs-6 mb-4">Se uso una programación Maestro-Esclavo con las placas Arduino Uno y la ESP32, a manera que se utilzó como Maestro la placa Arduino Uno que es la que extrae y manda los datos al ESP32. El ESP32 fue el esclavo, recibiendo los datos mediante comunicación I2C con la Arduino y el ESP32 solo lee y sube los datos a Thinspeak, de forma que podamos monitorear las corrientes de distinas aulas del IDIT.</p>
                         <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="600px" src="img/Armado.jpg" alt="..." /></figure>
                             
-                            <p id="simulacion">
-                            <h2 class="fw-bolder mb-4 mt-5 fs-5">- Simulación -</h1>
+                            <p id="implementación">
+                            <h2 class="fw-bolder mb-4 mt-5 fs-5">- Implementación -</h1>
                                 
-                            <!--LED ON-->
-                            <p class="fs-6 mb-4"><b><i>Programa de encendido de un LED</i></b></p>
+                            <!--Arduino UNO-->
+                            <p class="fs-6 mb-4"><b><i>Sistema de medición (Arduino UNO)</i></b></p>
                             <p class="fs-6 mb-4"><i>Código Arduino</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_ON.png" alt="..." /></figure>
+                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_Arduino.png" alt="..." /></figure>
                             <p class="fs-6 mb-4"><i>Diagrama de conexiones</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/LED_ON.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><b>Video simulación</b></p>
+                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/SCT013_Ard.jpg" alt="..." /></figure>
+                            <p class="fs-6 mb-4"><b>Captura de datos</b></p>
                         <figure class="mb-4" align="center"><video width="60%"  controls>
-                            <source src="video/LED on.mp4" type="video/mp4">
+                            <source src="video/Desktop 2025.04.03 - 22.03.59.02.mp4" type="video/mp4">
                         </video></p></figure>
 
-                            <!--LED OFF-->
-                            <p class="fs-6 mb-4"><b><i>Programa de apagado de un LED</i></b></p>
+                            <!--ESP32-->
+                            <p class="fs-6 mb-4"><b><i>Recepción y envio de datos por Wifi (ESP32)</i></b></p>
                             <p class="fs-6 mb-4"><i>Código Arduino</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_OFF.png" alt="..." /></figure>
+                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_ESP1.png" alt="..." /></figure>
+                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_ESP2.png" alt="..." /></figure>
+                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_ESP3.png" alt="..." /></figure>
                             <p class="fs-6 mb-4"><i>Diagrama de conexiones</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/LED_OFF.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><b>Video simulación</b></p>
-                        <figure class="mb-4" align="center"><video width="60%"  controls>
-                            <source src="video/LED of.mp4" type="video/mp4">
-                        </video></p></figure>
+                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Ard_ESP.jpg" alt="..." /></figure>
+                            
 
-                     <!--LED BLINK-->
-                            <p class="fs-6 mb-4"><b><i>Programa de encendido y apagado de un LED mediante retardos</i></b></p>
-                            <p class="fs-6 mb-4"><i>Código Arduino</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_Blink.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><i>Diagrama de conexiones</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/LED_Blink.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><b>Video simulación</b></p>
-                        <figure class="mb-4" align="center"><video width="60%"  controls>
-                            <source src="video/Blink.mp4" type="video/mp4">
-                        </video></p></figure>
-
-                     <!--LED BUTTON-->
-                            <p class="fs-6 mb-4"><b><i>Sistema de encendido y apagado de un LED mediante el uso de botones</i></b></p>
-                            <p class="fs-6 mb-4"><i>Código Arduino</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_Button.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><i>Diagrama de conexiones</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/LED_Button.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><b>Video simulación</b></p>
-                        <figure class="mb-4" align="center"><video width="60%"  controls>
-                            <source src="video/Pushbutton.mp4" type="video/mp4">
-                        </video></p></figure>
-
-                    <!--LED OR-->
-                            <p class="fs-6 mb-4"><b><i>Sistema de encendido y apagado de un LED mediante el uso de dos botones (OR)</i></b></p>
-                            <p class="fs-6 mb-4"><i>Código Arduino</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_OR.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><i>Diagrama de conexiones</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/LED_OR.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><b>Video simulación</b></p>
-                        <figure class="mb-4" align="center"><video width="60%"  controls>
-                            <source src="video/OR.mp4" type="video/mp4">
-                        </video></p></figure>
-
-                    <!--LED AND-->
-                            <p class="fs-6 mb-4"><b><i>Sistema de encendido y apagado de un LED mediante el uso de dos botones (AND)</i></b></p>
-                            <p class="fs-6 mb-4"><i>Código Arduino</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Code_AND.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><i>Diagrama de conexiones</i></p>
-                            <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/LED_AND.png" alt="..." /></figure>
-                            <p class="fs-6 mb-4"><b>Video simulación</b></p>
-                        <figure class="mb-4" align="center"><video width="60%"  controls>
-                            <source src="video/AND.mp4" type="video/mp4">
-                        </video></p></figure>
                     
                         <p id="resultados">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Resultados -</h2>
