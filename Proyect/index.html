@@ -141,11 +141,15 @@
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Resultados -</h2>
                         <p class="fs-6 mb-4">Resultados obtenidos mediante el monitoreo de los salones durante un periodo de 24H y un envio de datos cada 3 segundos.</p>
                         <p class="fs-6 mb-4"><b><i>Gráficas de dispersión</i></b></p>
-                        <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="400px" src="img/Graficas.png" alt="..." /></figure>
+                        <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="600px" src="img/Graficas.png" alt="..." /></figure>
 
                         <p id="conclusiones">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Conclusiones -</h2>
-                        <p class="fs-6 mb-4">El conocimiento adquirido en este análisis no solo facilita el diseño de proyectos con el ESP32, sino que también sienta las bases para el desarrollo de sistemas más complejos. Con una adecuada comprensión de sus capacidades, es posible explorar nuevas aplicaciones en el ámbito de la automatización, la domótica y la interconectividad digital.</p>
+                        <ul>
+                            <li><b>Validación del enfoque de medición:</b> La práctica demuestra que es viable emplear el sensor SCT013 para la medición de corriente, utilizando un amplificador operacional LM358 para filtrar y amplificar la señal, lo que garantiza lecturas precisas y estables.</li>
+                            <li><b>Integración de plataformas:</b> Aunque inicialmente se presentaron dificultades con el uso directo de la ESP32, la implementación del Arduino Uno como dispositivo intermediario evidenció la capacidad de adaptación y la efectividad de la comunicación I2C para transferir datos de forma confiable.</li>
+                            <li><b>Visualización y monitoreo en tiempo real:</b> La transferencia de datos a través de la ESP32 a la plataforma ThingSpeak permite visualizar el comportamiento del consumo eléctrico en tiempo real, facilitando la supervisión y análisis de los sistemas monitorizados.</li>    
+                        </ul>
 
                         <p id="referencias">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Referencias -</h2>
@@ -153,12 +157,18 @@
                                 <li>Espressif Systems. (s.f.). ESP32 Series – Datasheet & Technical Reference Manual. Recuperado de https://www.espressif.com</li>
                                 <li>Arduino. (s.f.). ESP32 with Arduino IDE. Recuperado de https://www.arduino.cc</li>
                                 <li>Fernández, J. (2021). Introducción al ESP32 y sus aplicaciones en IoT. Editorial Electrónica Avanzada.</li>
+                                <li>Naylamp Mechatronics. (n.d.). Tutorial sensor de corriente AC no invasivo SCT-013. Recuperado el 31 de marzo de 2025, de https://naylampmechatronics.com/blog/51_tutorial-sensor-de-corriente-ac-no-invasivo-sct-013.html</li>
+                                <li>ThingSpeak. (n.d.). ThingSpeak - IoT Analytics Platform. Recuperado el 31 de marzo de 2025, de https://thingspeak.com/</li>
                             </ul>
                         
                         <p id="descargables">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Descargables -</h2>
-                        <p class="fs-6 mb-4">Descargar documento Word: <a href="files/Reporte 1_Wifi ESP32_Juan Carlos Avendaño.docx">Documento.docx</a> </p>
-
+                        <p class="fs-6 mb-4">Descargar código Arduino UNO (Master): <a href="files/arduino_uno.ino">Documento.ino</a> </p>
+                        <p class="fs-6 mb-4">Descargar código ESP32 (Slave 1): <a href="files/esp32_salon1.ino">Documento.ino</a> </p>
+                        <p class="fs-6 mb-4">Descargar código ESP32 (Slave 2): <a href="files/esp32_salon2.ino">Documento.ino</a> </p>
+                        <p class="fs-6 mb-4">Descargar código ESP32 (Slave 3): <a href="files/esp32_salon3.ino">Documento.ino</a> </p>
+                        <p class="fs-6 mb-4">Descargar código ESP32 (Slave 4): <a href="files/esp32_salon4.ino">Documento.ino</a> </p>
+                        <p class="fs-6 mb-4">Descargar código ESP32 (Slave 5): <a href="files/esp32_salon5.ino">Documento.ino</a> </p>
                 </div>
             </section>
 
